@@ -488,6 +488,9 @@ ul {
   display: flex;
   align-items: center;
   max-width: 100%;
+  background-color: #a3a3a341;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 .iconography:hover {
   animation: myAnim 2s ease 0s 1 normal forwards;
