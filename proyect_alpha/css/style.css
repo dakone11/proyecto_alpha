@@ -631,7 +631,7 @@ textarea {
       position:relative !important;
       width:100%;
  }
- /*
+ 
   .arrow{
       position: absolute;
       top: 180%;
@@ -639,7 +639,7 @@ textarea {
       transform: translate(-50%,-50%);
       display:inline;
  }
- */
+ 
  .navbar {
   
   font-size: 12px;
