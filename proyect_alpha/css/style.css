@@ -491,6 +491,7 @@ ul {
   background-color: #a3a3a341;
   border-radius: 6px;
   margin-bottom: 12px;
+  padding: 12px;
 }
 .iconography:hover {
   animation: myAnim 2s ease 0s 1 normal forwards;
