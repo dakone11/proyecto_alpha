@@ -232,10 +232,6 @@ body {
   margin:0 auto;
   width:85%;
 }
-.name-text i {
-  color: #ec6f09;
-  
-}
 .download-cv:hover {
   color: #ec6f09;
 }
@@ -292,6 +288,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  
 }
 .navbar a:hover {
   color: #ec6f09;
