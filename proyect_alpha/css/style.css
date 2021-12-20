@@ -17,7 +17,6 @@ body {
 }
 /*****************************************************************      parte izquierda fixed               *********************************/
 .left {
-  border-right:1px solid rgba(0,0,0,.05);
   display:flex;
   justify-content: center;
   min-height: 100vh;
@@ -54,35 +53,7 @@ body {
   border:1px solid #fffffe;
   color:#ec6f09;
 }
-.right {
-  margin-left: auto;
-  height:100%;
-  position:relative;
-  width:66.66%;
-  background-color:#292828;
-  background: linear-gradient(45deg, rgba(255, 208, 146, 0), rgba(61, 61, 61, 0.315), rgba(87, 71, 56, 0.856), rgba(255, 138, 4, 0.938), rgb(255, 103, 2)) 0 0 / 500% no-repeat, url("/proyect_alpha/img/bg_derecha3.jpg") 0 0 / cover no-repeat;
-  animation: gradientAnimation 10s ease infinite;
-  animation: movimiento 30s infinite linear alternate;
-}
-@keyframes movimiento{
-  from{
-      background-position:bottom left;
- }
-  to{
-      background-position: top;
- }
-}
-@keyframes gradientAnimation {
-  0% {
-      background-position: 0% 30%, 0 0;
- }
-  50% {
-      background-position: 100% 70%, 0 0;
- }
-  100% {
-      background-position: 0% 30%, 0 0;
- }
-}
+
 .name-hero {
   background:rgba(0,0,0,.001);
   bottom: 200px;
@@ -94,6 +65,7 @@ body {
   top:0;
   width:85%;
 }
+
 /*******************************************************************                 logo animado izq                     ***************************************/
 .me-logo {
   background:url(/proyect_alpha/img/LOGO.png) no-repeat center center ;
@@ -184,10 +156,10 @@ body {
     transform: rotate(2deg);
   }
 }
-/*************************************************************        flechas animadas izquierda           ****************************************************
-.arrow{
+/*************************************************************        flechas animadas izquierda           *****************************************************/
+.arrow {
   position: absolute;
-  top: 180%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: none;
@@ -222,7 +194,7 @@ body {
  }
 }
 
-*/
+
 /*****************************************************************         text left          *************************************************************************/
 .name-fixed h1 {
   font-family: 'Montserrat', sans-serif;
@@ -260,12 +232,44 @@ body {
   margin:0 auto;
   width:85%;
 }
+.name-text i {
+  color: #ec6f09;
+  
+}
 .download-cv:hover {
   color: #ec6f09;
 }
 /*-------------------------------------------------------                       parte derecha               --------------------------------------------*/
 
-
+.right {
+  margin-left: auto;
+  height:100%;
+  position:relative;
+  width:66.66%;
+  background-color:#292828;
+  background: linear-gradient(45deg, rgba(255, 208, 146, 0), rgba(61, 61, 61, 0.315), rgba(87, 71, 56, 0.856), rgba(255, 138, 4, 0.938), rgb(255, 103, 2)) 0 0 / 500% no-repeat, url("/proyect_alpha/img/bg_derecha3.jpg") 0 0 / cover no-repeat;
+  animation: gradientAnimation 10s ease infinite;
+  animation: movimiento 30s infinite linear alternate;
+}
+@keyframes movimiento{
+  from{
+      background-position:bottom left;
+ }
+  to{
+      background-position: top;
+ }
+}
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 30%, 0 0;
+ }
+  50% {
+      background-position: 100% 70%, 0 0;
+ }
+  100% {
+      background-position: 0% 30%, 0 0;
+ }
+}
 
 
 
@@ -651,6 +655,13 @@ textarea {
   body {
       font-size:15px;
  }
+ .arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: block;
+}
 }
 
 
