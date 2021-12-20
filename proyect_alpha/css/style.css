@@ -1,0 +1,657 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing:antialiased;
+  font-family: 'Montserrat', sans-serif;
+  font-size:18px;
+  text-rendering:optimizeLegibility;
+  margin: 0 auto;
+}
+.wrapper {
+  height:100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+/*****************************************************************      parte izquierda fixed               *********************************/
+.left {
+  border-right:1px solid rgba(0,0,0,.05);
+  display:flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+  position:fixed;
+  width:33.33%;
+  background-image:url(/img/bg.jpg);
+  background-size: cover;
+  background-position:0px;
+  
+}
+.left a {
+  color:rgb(187, 187, 187);
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+}
+.myButton {
+  left:0;
+  margin:auto;
+  position:absolute;
+  right:0;
+  width:55%;
+  border-radius:6px;
+  border:1px solid #ec6f09;
+  display:inline-block;
+  cursor:pointer;
+  text-transform:uppercase;
+  text-align: center;
+  font-size:15px;
+  padding: 6px;
+  margin-top: 45px;
+}
+.myButton:hover {
+  border:1px solid #fffffe;
+  color:#ec6f09;
+}
+.right {
+  margin-left: auto;
+  height:100%;
+  position:relative;
+  width:66.66%;
+  background-color:#292828;
+  background: linear-gradient(45deg, rgba(255, 208, 146, 0), rgba(61, 61, 61, 0.315), rgba(87, 71, 56, 0.856), rgba(255, 138, 4, 0.938), rgb(255, 103, 2)) 0 0 / 500% no-repeat, url("/img/bg_derecha3.jpg") 0 0 / cover no-repeat;
+  animation: gradientAnimation 10s ease infinite;
+  animation: movimiento 30s infinite linear alternate;
+}
+@keyframes movimiento{
+  from{
+      background-position:bottom left;
+ }
+  to{
+      background-position: top;
+ }
+}
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 30%, 0 0;
+ }
+  50% {
+      background-position: 100% 70%, 0 0;
+ }
+  100% {
+      background-position: 0% 30%, 0 0;
+ }
+}
+.name-hero {
+  background:rgba(0,0,0,.001);
+  bottom: 200px;
+  height:310px;
+  left:0;
+  margin:auto;
+  position:absolute;
+  right:0;
+  top:0;
+  width:85%;
+}
+/*******************************************************************                 logo animado izq                     ***************************************/
+.me-logo {
+  background:url(/img/LOGO.png) no-repeat center center ;
+  background-size:100%;
+  background-position:0px;
+  height:150px;
+  margin:0 auto;
+  position:relative;
+  width:200px;
+  animation: logo_animado 2s ease-out 2s infinite alternate-reverse none;
+  margin-top: 5px;
+  filter: drop-shadow(4px 1px 47px #ff6001);
+}
+@keyframes logo_animado {
+  0% {
+      animation-timing-function: ease-in;
+      opacity: 1;
+      transform: translateY(-45px);
+ }
+  24% {
+      opacity: 1;
+ }
+  40% {
+      animation-timing-function: ease-in;
+      transform: translateY(-24px);
+ }
+  65% {
+      animation-timing-function: ease-in;
+      transform: translateY(-12px);
+ }
+  82% {
+      animation-timing-function: ease-in;
+      transform: translateY(-6px);
+ }
+  93% {
+      animation-timing-function: ease-in;
+      transform: translateY(-4px);
+ }
+  25%, 55%, 75%, 87% {
+      animation-timing-function: ease-out;
+      transform: translateY(0px);
+ }
+  100% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0px);
+ }
+}
+.me-logo:hover {
+  background:url(/img/logo2.png) no-repeat center center ;
+ 
+  background-size:100%;
+  background-position:0px;
+  height:150px;
+  margin:0 auto;
+  position:relative;
+  width:200px;
+  animation: myAnim 2s ease 0s infinite normal forwards;
+}
+@keyframes myAnim {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 100%;
+  }
+
+  10% {
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    transform: rotate(2deg);
+  }
+}
+/*************************************************************        flechas animadas izquierda           ****************************************************
+.arrow{
+  position: absolute;
+  top: 180%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.arrow span{
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-bottom: 2px solid #ff7d03;
+  border-right: 2px solid #ffaf03;
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(-20px,-20px);
+ }
+  50%{
+      opacity: 1;
+ }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(20px,20px);
+ }
+}
+
+*/
+/*****************************************************************         text left          *************************************************************************/
+.name-fixed h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size:1.5em;
+  text-align:center;
+  color: #FFF;
+  font-style:normal;
+  font-weight:500;
+}
+.name-fixed h1 em {
+  color: #ec6f09;
+  font-style:normal;
+  font-weight:500;
+}
+.name-fixed h2 {
+  color: #838383;
+  font-size: small;
+  text-align:center;
+}
+.name-fixed p {
+  font-family: 'Ubuntu', sans-serif;
+  color: #a3a3a3;
+  line-height:1.5;
+  margin:0 8px 0 0;
+  text-align:center;
+}
+.name-fixed h3 {
+  color: #ffffff;
+  text-align:center;
+  text-transform: uppercase;
+  font-style:normal;
+  font-weight:300;
+}
+.name-fixed .name-text {
+  margin:0 auto;
+  width:85%;
+}
+.download-cv:hover {
+  color: #ec6f09;
+}
+/*-------------------------------------------------------                       parte derecha               --------------------------------------------*/
+
+
+
+
+
+/*****************************************************              NAV                                  *******************************************************/
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  background-color: #0c0c0c;
+  z-index: 1;
+  font-size: 15px;
+
+}
+.navbar a {
+  
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover {
+  color: #ec6f09;
+
+}
+
+
+/***************************************                     IMG CARLOS                                 ************************************************/
+.img-carlos {
+  width: 200px;
+  float:left;
+  padding: 12px 18px ;
+  margin: 6px 24px; 
+  animation: bg_left 1s ease 2s 1 normal backwards;
+}
+@keyframes bg_left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.img-carlos:hover {
+  -webkit-filter: grayscale(30%);
+  filter: grayscale(100%);
+  width: 200px;
+  float:left;
+  padding: 12px 18px ;
+  margin: 6px 24px;
+}
+
+
+ 
+
+/***********************************************                   texto drcha                        *************************************************************/
+
+h1 {
+  color:#292828;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  text-align: center;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  margin: 12px 0;
+  font-size: 34px !important;
+}
+hr {
+  border: 1px solid #292828da;
+  width: 80%;
+  margin-top: 1em;
+  margin-bottom: 1em; 
+  background-color: white;
+  
+}
+
+/*******************************************************                   section derecha                   ************************************************/
+section {
+  background-color:#47454575;
+  padding: 24px;
+  border-radius: 10px 76px 0px 75px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  outline: 1px inset#fda503;
+  outline-offset: 12px;
+  margin:90px auto;
+  margin-bottom: 120px;
+  /*opacity: 0.44;
+  transition: opacity 1s ease-in 0s;
+  
+}
+section:hover{
+  opacity: 1;*/
+
+}
+section a {
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  color:#1d1c1c;
+  padding: 12px;
+  text-transform: uppercase;
+}
+section a:hover {
+  text-decoration: none;
+  color:#ec6f09;
+}
+/**********************************************************                      container                      ********************************************************/
+.container {
+  margin:0 auto;
+  max-width:975px;
+  padding:2em;
+  position: relative;
+}
+.container p {
+  font-family: 'Ubuntu', sans-serif;
+  padding :6px;
+  color:#f8f8f8;
+}
+.container h2 {
+  font-family: 'Ubuntu', sans-serif;
+  padding :8px;
+  color: #ec9c09;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.container em {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color:#ec9c09;
+}
+/*********************************************                            eslogan                         ************************************************************************/
+
+#eslogan {
+  background-color: #29282815;
+  color:#ec9c09;
+  font-size:36px;
+  padding-top:12px;  
+  width:100%;
+  bottom:45%;
+  display:block;
+  margin-bottom: 12px;
+  text-align: center;
+  border-radius: 10px 76px 0px 75px;
+  outline: 1px inset#ffffff;
+  outline-offset: 12px;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  color:#fff;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+/*
+#flip div div {
+  background:#fd730123;
+}
+#flip div:first-child div {
+  background:#ec9c093f;
+}
+#flip div:last-child div {
+  background:#ec51091e;
+}*/
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+/***********************************************************                lista                           *********************************************************/
+
+ul {
+  list-style-type:none;
+}
+.skill-set li {
+  background:rgba(0,0,0,.75);
+  border-radius:5px;
+  color:#FFF;
+  display:inline-block;
+  list-style:none;
+  margin:15px 15px 0 0;
+  padding:10px;
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+}
+.skill-set li:hover {
+ 
+  background-color:#ec6f09;
+  transition: background-color 600ms;
+}
+
+
+/**********************************************************                   iconos fortalezas                  *****************************************************************/
+.fortalezas_1 {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+}
+.iconography:hover {
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+.contact_text{
+  padding: 18px 32px;
+  color: white;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif;
+}
+.contact_text a {
+  color:#ec9c09;
+}
+/*************************************************************              form                    *************************************************************/
+form {
+  padding: 18px 32px;
+  margin-bottom: 200px;
+}
+.input-container {
+  display: block;
+  margin-bottom: 16px;
+  color: white;
+  font-size: 16px;
+}
+input {
+  width: 100%;
+  padding: 5px 10px;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  background: #e6e6e638;
+  box-shadow: 0 1px 0px #ffa600;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+textarea:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.308);
+}
+textarea {
+  width: 100%;
+  padding: 5px 10px;
+  height: 122px;
+  border-radius: 5px;
+  border: none;
+  background: #e6e6e638;
+  box-shadow: 0 1px 0px #ffa600;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  resize: none;
+}
+.send-container {
+  width: 30%;
+  text-align: right;
+  margin-right: 20px;
+  background-color: #000000;
+}
+/******************************************************************************    footer       ***********************************************************/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background:#0c0c0c;
+  text-align: center;
+  color: #f4f4f4;
+  max-height: 150px;
+}
+.icons {
+  padding-top: 1rem;
+}
+.icons a {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0.5rem;
+  color: #f4f4f4;
+}
+.icons a:hover {
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0.5rem;
+  color:#ec6f09;
+}
+.pie_footer {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding-bottom: 6px;
+  font-family: 'Ubuntu', sans-serif;
+}
+/*****************************************************************        media screen       *********************************************************/
+@media (max-width: 500px){
+  html{
+      font-size: 50%;
+ }
+}
+
+
+@media (min-width: 501px) and (max-width: 768px){
+  html{
+      font-size: 50%;
+ }
+}
+
+
+@media screen and (max-width: 48em) {
+  .right,.left {
+      position:relative !important;
+      width:100%;
+ }
+ /*
+  .arrow{
+      position: absolute;
+      top: 180%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display:inline;
+ }
+ */
+ .navbar {
+  
+  font-size: 12px;
+ }
+}
+
+@media screen and (max-width: 75em) {
+  body {
+      font-size:16px;
+ }
+}
+@media screen and (max-width: 60em) {
+  body {
+      font-size:15px;
+ }
+}
+
+
+  
