@@ -624,7 +624,7 @@ textarea {
  }
 }
 
-
+/*  768PX  */
 @media screen and (max-width: 48em) {
   .right,.left {
       position:relative !important;
@@ -644,23 +644,18 @@ textarea {
   font-size: 12px;
  }
 }
-
+/* 1200PX */
 @media screen and (max-width: 75em) {
   body {
       font-size:16px;
  }
 }
+/* 960 PX */
 @media screen and (max-width: 60em) {
   body {
       font-size:15px;
  }
- .arrow {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: block;
-}
+ 
 .fortalezas {
   display: block;
   align-items: center;
