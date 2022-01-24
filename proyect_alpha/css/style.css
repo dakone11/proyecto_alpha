@@ -125,7 +125,7 @@ body {
   width:200px;
   animation: logo_animado 2s ease-out 2s infinite alternate-reverse none;
   margin-top: 5px;
-  filter: drop-shadow(4px 1px 47px #ff6001);
+  filter: drop-shadow(1px 1px 7px #b6b5b57c);
 }
 @keyframes logo_animado {
   0% {
